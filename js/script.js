@@ -10,7 +10,7 @@
 
 // punto 1
 
-let mainDiv =  document.getElementById("mainbox")
+let prezzoFinale =  document.getElementById("mainbox");
 
 let chilometri = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 console.log(chilometri)
@@ -20,27 +20,29 @@ let etàPasseggero = parseInt(prompt("Quanti anni hai?"));
 console.log(etàPasseggero)
 
 if (isNaN(chilometri) || isNaN(etàPasseggero)){
-    mainDiv.innerHTML = "Devi inserire dei numeri!";
+    prezzoFinale.innerHTML = "Devi inserire dei numeri!";
     window.location.reload();
 }
 
 // punto 2
 
 let prezzoBiglietto = (0.21 * chilometri);
-let prezzoFinale = prezzoBiglietto.toFixed(2)
+
 
 
 
 if (etàPasseggero < 18) {
-    prezzoFinale = prezzoBiglietto.toFixed(2) - (prezzoBiglietto * 0.2)
+    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2)
     console.log(prezzoBiglietto)
 
 } else if (etàPasseggero > 65){
-    prezzoFinale = prezzoBiglietto.toFixed(2) - (prezzoBiglietto * 0.4)
+    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.4)
     console.log(prezzoBiglietto)
 } else {
     prezzoBiglietto;
 }
 
+// punto 3
 
+prezzoFinale.innerHTML = prezzoBiglietto.toFixed(2)
 
