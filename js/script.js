@@ -32,11 +32,11 @@ let prezzoFinale = prezzoBiglietto.toFixed(2)
 
 
 if (etàPasseggero < 18) {
-    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.2)
+    prezzoFinale = prezzoBiglietto.toFixed(2) - (prezzoBiglietto * 0.2)
     console.log(prezzoBiglietto)
 
 } else if (etàPasseggero > 65){
-    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.4)
+    prezzoFinale = prezzoBiglietto.toFixed(2) - (prezzoBiglietto * 0.4)
     console.log(prezzoBiglietto)
 } else {
     prezzoBiglietto;
