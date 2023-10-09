@@ -11,7 +11,6 @@
 // punto 1
 
 let mainDiv =  document.getElementById("mainbox")
-console.log(mainDiv)
 
 let chilometri = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 console.log(chilometri)
@@ -26,3 +25,12 @@ if (isNaN(chilometri) || isNaN(etàPasseggero)){
 }
 
 // punto 2
+
+const prezzoBiglietto = (0.21 * chilometri);
+console.log(prezzoBiglietto);
+
+
+if (etàPasseggero < 18) {
+    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2)
+    console.log(prezzoBiglietto)
+}
