@@ -26,11 +26,21 @@ if (isNaN(chilometri) || isNaN(etàPasseggero)){
 
 // punto 2
 
-const prezzoBiglietto = (0.21 * chilometri);
-console.log(prezzoBiglietto);
+let prezzoBiglietto = (0.21 * chilometri);
+let prezzoFinale = prezzoBiglietto.toFixed(2)
+
 
 
 if (etàPasseggero < 18) {
-    prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2)
+    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.2)
     console.log(prezzoBiglietto)
+
+} else if (etàPasseggero > 65){
+    prezzoFinale = prezzoBiglietto - (prezzoBiglietto * 0.4)
+    console.log(prezzoBiglietto)
+} else {
+    prezzoBiglietto;
 }
+
+
+
