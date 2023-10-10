@@ -16,10 +16,10 @@ let chilometri = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 console.log(chilometri)
 
 
-let etàPasseggero = parseInt(prompt("Quanti anni hai?"));
-console.log(etàPasseggero)
+let agePasseggero = parseInt(prompt("Quanti anni hai?"));
+console.log(agePasseggero)
 
-if (isNaN(chilometri) || isNaN(etàPasseggero)){
+if (isNaN(chilometri) || isNaN(agePasseggero)){
     prezzoFinale.innerHTML = "Devi inserire dei numeri!";
     window.location.reload();
 }
@@ -31,11 +31,11 @@ let prezzoBiglietto = (0.21 * chilometri);
 
 
 
-if (etàPasseggero < 18) {
+if (agePasseggero < 18) {
     prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2)
     console.log(prezzoBiglietto)
 
-} else if (etàPasseggero > 65){
+} else if (agePasseggero > 65){
     prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.4)
     console.log(prezzoBiglietto)
 } else {
